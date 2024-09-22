@@ -5,7 +5,7 @@ const Card = (props) => {
 
   const CardCode = (
     <div
-      className="m-0  border rounded-lg  shadow-lg bg-gray-800 border-gray-700 w-auto h-auto sm:w-full sm:h-80 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl"
+      className=""
       onClick={props.onClick}
     >
       <div className="w-full relative min-h-fit flex">
