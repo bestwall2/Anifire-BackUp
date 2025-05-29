@@ -1,7 +1,7 @@
 import { NavBarStyled } from './styles/Navigation.style.js';
-import React from 'react'
+import React, { memo } from 'react'; // Import memo
 
-const Navigation = () => {
+const NavigationComponent = () => { // Renamed original component
   return (
     <NavBarStyled>
       <hr className="border-gray-700 rounded-b-md mb-3 "></hr>
@@ -27,6 +27,8 @@ const Navigation = () => {
       </div>
     </NavBarStyled>
   )
-}
+};
 
-export default Navigation
+const Navigation = memo(NavigationComponent); // Wrap NavigationComponent with memo
+
+export default Navigation;

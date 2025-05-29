@@ -122,8 +122,15 @@ export let favouritesAnimeQuery = `
 `;
 
 export let searchAnimeQuery = `
-	query($search: String) {
-		Page(page: 1, perPage: 100) {
+	query($search: String, $page: Int, $perPage: Int) {
+		Page(page: $page, perPage: $perPage) {
+			pageInfo {
+				total
+				perPage
+				currentPage
+				lastPage
+				hasNextPage
+			}
 			media(search: $search, type: ANIME, sort: POPULARITY_DESC) {
 				idMal
 				title {
